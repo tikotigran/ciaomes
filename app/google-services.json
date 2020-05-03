@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "599803992830",
+    "firebase_url": "https://ciao-messenger-53614.firebaseio.com",
+    "project_id": "ciao-messenger-53614",
+    "storage_bucket": "ciao-messenger-53614.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599803992830:android:9ea77d22e39dd9d0d563af",
+        "android_client_info": {
+          "package_name": "tik.jan.ciao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599803992830-qcvn1vvvfnmkid1otcoduepl6fcgqc9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKNyIOwkvDpMhKuXT_GFt5kWgZRVt-3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599803992830-qcvn1vvvfnmkid1otcoduepl6fcgqc9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
