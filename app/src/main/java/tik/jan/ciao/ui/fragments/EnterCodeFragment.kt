@@ -40,8 +40,9 @@ class EnterCodeFragment(val phoneNumber: String, val id: String) :
                             showToast("Добро пожаловать")
                             (activity as RegisterActivity).replaceActivity(MainActivity())
                         }else showToast(task2.exception?.message.toString())
-
-                    }
+                    }.addOnFailureListener { showToast(it.message.toString()) }
+                    .addOnCanceledListener { showToast("CANCEL") }
+                
             } else showToast(task.exception?.message.toString())
         }
 

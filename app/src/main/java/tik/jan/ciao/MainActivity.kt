@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import tik.jan.ciao.activities.RegisterActivity
 import tik.jan.ciao.databinding.ActivityMainBinding
+import tik.jan.ciao.models.User
 import tik.jan.ciao.ui.fragments.ChatFragment
 import tik.jan.ciao.ui.objacts.AppDrawer
-import tik.jan.ciao.utilites.AUTH
-import tik.jan.ciao.utilites.initFirebase
-import tik.jan.ciao.utilites.replaceActivity
-import tik.jan.ciao.utilites.replaceFragment
+import tik.jan.ciao.utilites.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,6 +44,15 @@ class MainActivity : AppCompatActivity() {
         mToolbar = mBinding.maintoolbar
         mAppDrawer = AppDrawer(this,mToolbar)
         initFirebase()
+        initUser()
 
+    }
+
+    private fun initUser() {
+        REF_DATABASE_ROOT.child(NODE_USERS).child(UID)
+            .addListenerForSingleValueEvent(AppValueEventListener{
+                USER = it.getValue(User::class.java) ?:User()
+
+            })
     }
 }
