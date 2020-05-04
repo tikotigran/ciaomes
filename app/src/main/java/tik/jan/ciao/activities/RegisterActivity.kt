@@ -19,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         mBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         initFirebase()
+
     }
 
     override fun onStart() {
